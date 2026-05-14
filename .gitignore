@@ -1,5 +1,9 @@
-# Local Netlify folder
-.netlify
-
-.vercel
-.env*.local
+node_modules/
+dist/
+.netlify/
+.vercel/
+.env
+.env.*
+coverage/
+.vite/
+*.log
