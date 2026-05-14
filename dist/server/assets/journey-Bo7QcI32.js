@@ -1,0 +1,275 @@
+const journey = [
+  {
+    day: 1,
+    date: "2026-05-15",
+    displayDate: "May 15",
+    title: "It Begins❤️",
+    subtitle: "This is where our 11-day journey begins...",
+    poem: `हर रात तुम्हारी याद चुपके से मेरे पास आ बैठती है,
+और मैं देर तक ख़ामोशी में तुम्हारा नाम सोचता रहता हूँ।
+
+ये शहर, ये लोग, सब वैसे ही हैं… फिर भी कुछ खाली सा है,
+जैसे तुम्हारे बिना हर दिन बस आदत की तरह गुजरता हो।
+
+दूरी ने सिर्फ़ तुम्हारा हाथ मुझसे दूर किया है,
+वरना मेरा दिल आज भी तुम्हारे साथ ही रहता है।`,
+    poemAuthor: "Yours Truly",
+    song: "Your Favorite Song Title Here",
+    songArtist: "Artist Name Here",
+    songUrl: "",
+    memoryNote: `I still remember how effortlessly you made that moment feel like home.
+The way you smiled beside me, holding onto me like you never wanted the moment to end, made everything around us disappear.
+It wasn’t a grand day or a perfect place, it was just us, laughing without reasons and feeling complete without trying.
+Now when I look at this picture, I don’t just see a memory… I see the version of me that was happiest because you were beside me.
+And maybe that’s why I miss you so much, because with you, even ordinary moments felt unforgettable.`,
+    bonusSurprise: `Tonight, you get one rule — ask me anything, and if it can make you smile, I’ll do it for you.`,
+    locked: false,
+    unlockDate: "2026-05-14",
+    isBirthday: false,
+    isFinal: false,
+    color: "purple",
+    emoji: "🌸"
+  },
+  {
+    day: 2,
+    date: "2026-05-16",
+    displayDate: "May 16",
+    title: "A Million Little Stars",
+    subtitle: "Each one is a memory of you...",
+    poem: `Every star above tonight
+has heard me whisper your name.
+They keep it safe inside their light —
+no two nights ever the same.`,
+    poemAuthor: "Written for you",
+    song: "Your Second Song Here",
+    songArtist: "Artist Name Here",
+    songUrl: "",
+    memoryNote: `[Add your memory for Day 2 here. A laugh, a moment, a feeling you want to keep forever.]`,
+    bonusSurprise: `[Day 2 surprise: maybe a fun quiz about your relationship, or a sweet "Did you know...?" moment.]`,
+    locked: false,
+    unlockDate: "2026-05-16",
+    isBirthday: false,
+    isFinal: false,
+    color: "pink",
+    emoji: "✨"
+  },
+  {
+    day: 3,
+    date: "2026-05-17",
+    displayDate: "May 17",
+    title: "Every Quiet Moment",
+    subtitle: "The ones no one else knows about...",
+    poem: `I love you most in quiet things —
+the way the morning gently brings
+your name to mind before the sun
+has even told the night it's done.`,
+    poemAuthor: "Written for you",
+    song: "Third Song Here",
+    songArtist: "Artist Name Here",
+    songUrl: "",
+    memoryNote: `[Day 3 memory: describe a quiet, intimate moment — maybe a lazy afternoon, a look across the room, a message that made your heart skip.]`,
+    bonusSurprise: `[Day 3 surprise: a letter fragment, a love note hidden inside a poetic riddle, something only she would understand.]`,
+    locked: false,
+    unlockDate: "2026-05-17",
+    isBirthday: false,
+    isFinal: false,
+    color: "purple",
+    emoji: "🌙"
+  },
+  {
+    day: 4,
+    date: "2026-05-18",
+    displayDate: "May 18",
+    title: "Moonlit Promises",
+    subtitle: "The ones we made without words...",
+    poem: `We made no vows beneath the moon,
+yet somehow every silver tune
+felt like a promise — soft and real —
+the kind that only hearts can feel.`,
+    poemAuthor: "Written for you",
+    song: "Fourth Song Here",
+    songArtist: "Artist Name Here",
+    songUrl: "",
+    memoryNote: `[Day 4 memory: a night you remember vividly — the lighting, the feeling, the things that were said or left unsaid.]`,
+    bonusSurprise: `[Day 4 surprise: maybe a "would you rather" question about your future together, or a little love challenge for today.]`,
+    locked: false,
+    unlockDate: "2026-05-18",
+    isBirthday: false,
+    isFinal: false,
+    color: "gold",
+    emoji: "🌕"
+  },
+  {
+    day: 5,
+    date: "2026-05-19",
+    displayDate: "May 19",
+    title: "Halfway There",
+    subtitle: "Five days of love, six more ahead...",
+    poem: `We are halfway through the stars,
+half a wish, half a dream,
+and still your laughter crosses every scar —
+more beautiful than anything I've seen.`,
+    poemAuthor: "Written for you",
+    song: "Fifth Song Here",
+    songArtist: "Artist Name Here",
+    songUrl: "",
+    memoryNote: `[Day 5 memory: a turning point — a moment that made you think "I really love this person." Describe what changed or what solidified.]`,
+    bonusSurprise: `[Day 5 surprise: 5 things you love about her, wrapped in a creative format — maybe an acrostic, maybe a little illustrated list.]`,
+    locked: false,
+    unlockDate: "2026-05-19",
+    isBirthday: false,
+    isFinal: false,
+    color: "pink",
+    emoji: "💫"
+  },
+  {
+    day: 6,
+    date: "2026-05-20",
+    displayDate: "May 20",
+    title: "You Are Magic",
+    subtitle: "And I never want to forget it...",
+    poem: `You move through life like candlelight —
+you don't announce yourself, and yet
+every room you enter glows at night.
+You are the thing I won't forget.`,
+    poemAuthor: "Written for you",
+    song: "Sixth Song Here",
+    songArtist: "Artist Name Here",
+    songUrl: "",
+    memoryNote: `[Day 6 memory: a moment when you realized just how special she is — something she did that surprised you or moved you deeply.]`,
+    bonusSurprise: `[Day 6 surprise: a small gift reveal, a voice message transcript, a personal playlist description, or a heartfelt challenge.]`,
+    locked: false,
+    unlockDate: "2026-05-20",
+    isBirthday: false,
+    isFinal: false,
+    color: "purple",
+    emoji: "🕯️"
+  },
+  {
+    day: 7,
+    date: "2026-05-21",
+    displayDate: "May 21",
+    title: "The Night Before",
+    subtitle: "Tomorrow the world celebrates you...",
+    poem: `Tomorrow, the sky will hold its breath,
+the stars will lean in close and shine —
+because tomorrow, love, of all the rest,
+is the day you were made mine.`,
+    poemAuthor: "Written for you",
+    song: "Seventh Song Here",
+    songArtist: "Artist Name Here",
+    songUrl: "",
+    memoryNote: `[Day 7 memory: share an anticipation memory — a night before something special, a feeling of excitement, a dream you had about her.]`,
+    bonusSurprise: `[Day 7 surprise: a teaser for tomorrow's birthday reveal — build the suspense! Maybe a clue or a riddle about the final gift.]`,
+    locked: false,
+    unlockDate: "2026-05-21",
+    isBirthday: false,
+    isFinal: false,
+    color: "gold",
+    emoji: "🌠"
+  },
+  {
+    day: 8,
+    date: "2026-05-22",
+    displayDate: "May 22",
+    title: "🎂 Happy Birthday, My Love",
+    subtitle: "The day the universe decided to give me you.",
+    poem: `Today the sun rose just for you,
+the flowers opened soft and new,
+and somewhere in the morning air
+your name was all the world could bear.
+
+Happy Birthday, my love. ♡
+May this year bring you everything
+your beautiful heart deserves.`,
+    poemAuthor: "Written for you, with all my love",
+    song: "Birthday Song Here",
+    songArtist: "Artist Name Here",
+    songUrl: "",
+    memoryNote: `[Birthday memory: write about the day she was born into your life — when you met, what that first impression was, or what her birthday means to you. Make this the most special entry.]`,
+    bonusSurprise: `[Birthday surprise: this should be the biggest reveal of all — a special video message, a photo montage description, a major gift hint, or a heartfelt letter in full.]`,
+    locked: false,
+    unlockDate: "2026-05-22",
+    isBirthday: true,
+    isFinal: false,
+    color: "birthday",
+    emoji: "🎂"
+  },
+  {
+    day: 9,
+    date: "2026-05-23",
+    displayDate: "May 23",
+    title: "The Day After",
+    subtitle: "The magic doesn't end with the candles...",
+    poem: `And when the birthday candles fade,
+the wishes are still real,
+somewhere in the love we've made —
+in everything we feel.`,
+    poemAuthor: "Written for you",
+    song: "Ninth Song Here",
+    songArtist: "Artist Name Here",
+    songUrl: "",
+    memoryNote: `[Day 9 memory: a morning after a special night — the glow that lingers, a sleepy message, or a quiet beautiful moment together.]`,
+    bonusSurprise: `[Day 9 surprise: a reflection — what this year meant, what you're grateful for, what you're looking forward to together.]`,
+    locked: false,
+    unlockDate: "2026-05-23",
+    isBirthday: false,
+    isFinal: false,
+    color: "pink",
+    emoji: "🌹"
+  },
+  {
+    day: 10,
+    date: "2026-05-24",
+    displayDate: "May 24",
+    title: "One More Day of Magic",
+    subtitle: "Almost there... save the best for last.",
+    poem: `One last night I'll hold this feeling —
+this soft, electric, golden thing.
+Tomorrow I have something waiting —
+a gift my heart has tried to bring.`,
+    poemAuthor: "Written for you",
+    song: "Tenth Song Here",
+    songArtist: "Artist Name Here",
+    songUrl: "",
+    memoryNote: `[Day 10 memory: a "penultimate" memory — the one right before something changed for the better. Build toward the finale.]`,
+    bonusSurprise: `[Day 10 surprise: the final hint for tomorrow's gift. Make it exciting and full of love.]`,
+    locked: false,
+    unlockDate: "2026-05-24",
+    isBirthday: false,
+    isFinal: false,
+    color: "purple",
+    emoji: "💝"
+  },
+  {
+    day: 11,
+    date: "2026-05-25",
+    displayDate: "May 25",
+    title: "💌 Your Gift Awaits",
+    subtitle: "Open the envelope when you're ready...",
+    poem: `This was never just a website,
+a countdown or a card —
+this was every night I missed you,
+every wish made from afar.
+
+This was love, wrapped in starlight,
+sent your way across the sky —
+for the girl who holds my whole world
+in the softness of her eyes.`,
+    poemAuthor: "With everything I have",
+    song: "Final Song Here",
+    songArtist: "Artist Name Here",
+    songUrl: "",
+    memoryNote: `[Day 11 final memory: a love letter wrapped in a memory — your vision for the future, your deepest gratitude, the moment you knew. Make this unforgettable.]`,
+    bonusSurprise: `[Final surprise: this reveals the gift — click the envelope to open the final letter and reveal the button to the second website.]`,
+    locked: false,
+    unlockDate: "2026-05-25",
+    isBirthday: false,
+    isFinal: true,
+    color: "gold",
+    emoji: "💌"
+  }
+];
+export {
+  journey as j
+};
