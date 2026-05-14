@@ -78,7 +78,7 @@ function MemoriesPage() {
               Our Memories ♡
             </h1>
             <p className="font-body max-w-lg mx-auto" style={{ color: 'rgba(196,181,253,0.6)' }}>
-              Click any photo to open the full memory and story behind it.
+              How we have been through everything smiling and loving each other.❤️
             </p>
           </div>
 
