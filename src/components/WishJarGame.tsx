@@ -131,11 +131,12 @@ export default function WishJarGame() {
       {/* Jar container */}
       <div
         ref={containerRef}
-        className="relative mx-auto rounded-3xl overflow-hidden"
+        className="relative mx-auto rounded-3xl overflow-y-auto"
         style={{
           width: '100%',
           maxWidth: '380px',
-          height: '380px',
+          minHeight: '380px',
+maxHeight: '85vh',
           background: 'linear-gradient(180deg, rgba(168,85,247,0.08) 0%, rgba(13,5,32,0.6) 100%)',
           border: '2px solid rgba(168,85,247,0.35)',
           boxShadow: '0 0 40px rgba(168,85,247,0.15), inset 0 0 40px rgba(168,85,247,0.05)',
@@ -238,51 +239,90 @@ export default function WishJarGame() {
         )}
 
         {phase === 'success' && (
-          <div className="absolute inset-0 flex items-center justify-center p-5" style={{ background: 'rgba(5,2,13,0.92)' }}>
-            <div className="w-full">
-              <p className="font-script text-center text-lg mb-1" style={{ color: '#86efac' }}>
-                ✓ You got it right! ♡
-              </p>
-              <p className="font-body text-center text-xs mb-4" style={{ color: 'rgba(196,181,253,0.5)' }}>
-                Choose 3 wishes to keep in the jar...
-              </p>
+  <div
+    className="absolute inset-0 overflow-y-auto p-5"
+    style={{
+      background: 'rgba(5,2,13,0.92)',
+    }}
+  >
+    <div
+      className="w-full"
+      style={{
+        maxHeight: '85vh',
+        overflowY: 'auto',
+        paddingRight: '4px',
+      }}
+    >
+      <p
+        className="font-script text-center text-lg mb-1"
+        style={{ color: '#86efac' }}
+      >
+        ✓ You got it right! ♡
+      </p>
 
-              <div className="space-y-2">
-                {wishes.map(wish => {
-                  const sel = selectedWishes.includes(wish.id)
-                  return (
-                    <button
-                      key={wish.id}
-                      onClick={() => toggleWish(wish.id)}
-                      className="w-full p-2.5 rounded-xl text-xs font-body text-left transition-all duration-200 flex items-start gap-2"
-                      style={{
-                        background: sel ? 'rgba(168,85,247,0.2)' : 'rgba(168,85,247,0.06)',
-                        border: sel ? '1px solid rgba(168,85,247,0.5)' : '1px solid rgba(168,85,247,0.15)',
-                        color: sel ? '#e9d5ff' : 'rgba(196,181,253,0.5)',
-                      }}
-                    >
-                      <span>{wish.emoji}</span>
-                      <span>{wish.text}</span>
-                    </button>
-                  )
-                })}
-              </div>
+      <p
+        className="font-body text-center text-xs mb-4"
+        style={{ color: 'rgba(196,181,253,0.5)' }}
+      >
+        Choose 3 wishes to keep in the jar...
+      </p>
 
-              <button
-                onClick={saveWishes}
-                disabled={selectedWishes.length !== 3}
-                className="w-full mt-3 py-2 rounded-xl font-body text-sm transition-all duration-200"
-                style={{
-                  background: selectedWishes.length === 3 ? 'linear-gradient(135deg, #f59e0b, #ec4899)' : 'rgba(168,85,247,0.1)',
-                  color: selectedWishes.length === 3 ? 'white' : 'rgba(196,181,253,0.4)',
-                  cursor: selectedWishes.length === 3 ? 'pointer' : 'not-allowed',
-                }}
-              >
-                {selectedWishes.length}/3 — Save Wishes ✨
-              </button>
-            </div>
-          </div>
-        )}
+      <div className="space-y-2">
+        {wishes.map(wish => {
+          const sel = selectedWishes.includes(wish.id)
+
+          return (
+            <button
+              key={wish.id}
+              onClick={() => toggleWish(wish.id)}
+              className="w-full p-2.5 rounded-xl text-xs font-body text-left transition-all duration-200 flex items-start gap-2"
+              style={{
+                background: sel
+                  ? 'rgba(168,85,247,0.2)'
+                  : 'rgba(168,85,247,0.06)',
+
+                border: sel
+                  ? '1px solid rgba(168,85,247,0.5)'
+                  : '1px solid rgba(168,85,247,0.15)',
+
+                color: sel
+                  ? '#e9d5ff'
+                  : 'rgba(196,181,253,0.5)',
+              }}
+            >
+              <span>{wish.emoji}</span>
+              <span>{wish.text}</span>
+            </button>
+          )
+        })}
+      </div>
+
+      <button
+        onClick={saveWishes}
+        disabled={selectedWishes.length !== 3}
+        className="w-full mt-3 py-2 rounded-xl font-body text-sm transition-all duration-200"
+        style={{
+          background:
+            selectedWishes.length === 3
+              ? 'linear-gradient(135deg, #f59e0b, #ec4899)'
+              : 'rgba(168,85,247,0.1)',
+
+          color:
+            selectedWishes.length === 3
+              ? 'white'
+              : 'rgba(196,181,253,0.4)',
+
+          cursor:
+            selectedWishes.length === 3
+              ? 'pointer'
+              : 'not-allowed',
+        }}
+      >
+        {selectedWishes.length}/3 — Save Wishes ✨
+      </button>
+    </div>
+  </div>
+)}
 
         {phase === 'done' && (
           <div className="absolute inset-0 flex items-center justify-center p-6" style={{ background: 'rgba(5,2,13,0.92)' }}>

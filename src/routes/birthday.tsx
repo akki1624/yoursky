@@ -80,7 +80,7 @@ function BirthdayPage() {
                 Each card opens a full page of love ♡
               </p>
               <p className="font-body text-sm mt-1" style={{ color: 'rgba(196,181,253,0.5)' }}>
-                Click any day to read its poem, memory, and surprise
+                Everyday will have something for you, maybe a poem, a memory, or a message. Try to understand that each thing is from the bottom of someone's heart.
               </p>
             </div>
           </div>

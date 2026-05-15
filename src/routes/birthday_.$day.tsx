@@ -1,3 +1,4 @@
+import EnvelopeReveal from '@/components/EnvelopeReveal'
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { useState } from 'react'
 import StarField from '@/components/StarField'
@@ -190,104 +191,133 @@ const isUnlocked =
                 </p>
               </div>
 
-              {/* ===== MEMORY ===== */}
-              <div
-                className="rounded-3xl p-8 relative overflow-hidden"
-                style={{
-                  background: 'rgba(13,5,32,0.75)',
-                  backdropFilter: 'blur(16px)',
-                  border: '1px solid rgba(244,114,182,0.2)',
-                }}
-              >
-                <div className="flex items-center gap-2 mb-5">
-                  <span style={{ color: '#f472b6' }}>♡</span>
-                  <h2 className="font-serif text-lg" style={{ color: '#e9d5ff' }}>A Memory</h2>
-                </div>
+              {/* ===== MEMORY + BONUS (HIDDEN ON FINAL DAY) ===== */}
+{!day.isFinal && (
+  <>
+    {/* ===== MEMORY ===== */}
+    <div
+      className="rounded-3xl p-8 relative overflow-hidden"
+      style={{
+        background: 'rgba(13,5,32,0.75)',
+        backdropFilter: 'blur(16px)',
+        border: '1px solid rgba(244,114,182,0.2)',
+      }}
+    >
+      <div className="flex items-center gap-2 mb-5">
+        <span style={{ color: '#f472b6' }}>♡</span>
+        <h2 className="font-serif text-lg" style={{ color: '#e9d5ff' }}>
+          A Memory
+        </h2>
+      </div>
 
-                {/* Memory Image */}
-<div
-  className="rounded-3xl overflow-hidden mb-6"
-  style={{
-    border: '1px solid rgba(168,85,247,0.25)',
-    boxShadow: '0 0 40px rgba(168,85,247,0.12)',
-  }}
->
-  <img
-    src={`/memories/day${day.day}.png`}
-    alt={`Memory Day ${day.day}`}
-    className="w-full object-cover"
-    style={{
-      width: '100%',
-      maxHeight: '750px',
-    }}
-  />
-</div>
+      {/* Memory Image */}
+      <div
+        className="rounded-3xl overflow-hidden mb-6"
+        style={{
+          border: '1px solid rgba(168,85,247,0.25)',
+          boxShadow: '0 0 40px rgba(168,85,247,0.12)',
+        }}
+      >
+        <img
+          src={`/memories/day${day.day}.png`}
+          alt={`Memory Day ${day.day}`}
+          className="w-full object-cover"
+          style={{
+            width: '100%',
+            maxHeight: '750px',
+          }}
+        />
+      </div>
 
-                <p
-                  className="font-body leading-relaxed"
-                  style={{ color: 'rgba(233,213,255,0.75)', fontSize: '1rem', lineHeight: '1.85' }}
-                >
-                  {day.memoryNote}
-                </p>
-              </div>
+      <p
+        className="font-body leading-relaxed"
+        style={{
+          color: 'rgba(233,213,255,0.75)',
+          fontSize: '1rem',
+          lineHeight: '1.85',
+        }}
+      >
+        {day.memoryNote}
+      </p>
+    </div>
 
-              
+    {/* ===== BONUS SURPRISE ===== */}
+    <div
+      className="rounded-3xl overflow-hidden"
+      style={{
+        border: `1px solid ${accent}44`,
+      }}
+    >
+      <button
+        className="w-full p-6 flex items-center justify-between transition-all duration-300"
+        style={{
+          background: bonusOpen
+            ? 'rgba(168,85,247,0.12)'
+            : 'rgba(13,5,32,0.75)',
+          backdropFilter: 'blur(16px)',
+        }}
+        onClick={() => setBonusOpen(v => !v)}
+      >
+        <div className="flex items-center gap-3">
+          <span style={{ color: accent }}>🎁</span>
+          <h2
+            className="font-serif text-lg"
+            style={{ color: '#e9d5ff' }}
+          >
+            Bonus Surprise
+          </h2>
+        </div>
 
-              {/* ===== BONUS SURPRISE ===== */}
-              <div
-                className="rounded-3xl overflow-hidden"
-                style={{
-                  border: `1px solid ${accent}44`,
-                }}
-              >
-                <button
-                  className="w-full p-6 flex items-center justify-between transition-all duration-300"
-                  style={{
-                    background: bonusOpen ? 'rgba(168,85,247,0.12)' : 'rgba(13,5,32,0.75)',
-                    backdropFilter: 'blur(16px)',
-                  }}
-                  onClick={() => setBonusOpen(v => !v)}
-                >
-                  <div className="flex items-center gap-3">
-                    <span style={{ color: accent }}>🎁</span>
-                    <h2 className="font-serif text-lg" style={{ color: '#e9d5ff' }}>
-                      Bonus Surprise
-                    </h2>
-                  </div>
-                  <span
-                    className="text-lg transition-transform duration-300"
-                    style={{
-                      color: accent,
-                      transform: bonusOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-                    }}
-                  >
-                    ▾
-                  </span>
-                </button>
+        <span
+          className="text-lg transition-transform duration-300"
+          style={{
+            color: accent,
+            transform: bonusOpen
+              ? 'rotate(180deg)'
+              : 'rotate(0deg)',
+          }}
+        >
+          ▾
+        </span>
+      </button>
 
-                {bonusOpen && (
-                  <div
-                    className="px-6 pb-6"
-                    style={{
-                      background: 'rgba(13,5,32,0.75)',
-                      backdropFilter: 'blur(16px)',
-                      animation: 'fadeInUp 0.3s ease-out',
-                    }}
-                  >
-                    <div
-                      className="h-px w-full mb-5"
-                      style={{ background: `linear-gradient(90deg, transparent, ${accent}44, transparent)` }}
-                    />
-                    <p
-                      className="font-body leading-relaxed"
-                      style={{ color: 'rgba(233,213,255,0.75)', lineHeight: '1.85' }}
-                    >
-                      {day.bonusSurprise}
-                    </p>
-                  </div>
-                )}
-              </div>
+      {bonusOpen && (
+        <div
+          className="px-6 pb-6"
+          style={{
+            background: 'rgba(13,5,32,0.75)',
+            backdropFilter: 'blur(16px)',
+            animation: 'fadeInUp 0.3s ease-out',
+          }}
+        >
+          <div
+            className="h-px w-full mb-5"
+            style={{
+              background: `linear-gradient(90deg, transparent, ${accent}44, transparent)`,
+            }}
+          />
 
+          <p
+            className="font-body leading-relaxed"
+            style={{
+              color: 'rgba(233,213,255,0.75)',
+              lineHeight: '1.85',
+            }}
+          >
+            {day.bonusSurprise}
+          </p>
+        </div>
+      )}
+    </div>
+  </>
+)}
+
+{/* ===== FINAL ENVELOPE ===== */}
+{day.isFinal && (
+  <div className="flex justify-center">
+    <EnvelopeReveal giftUrl="https://your-second-website-link.com" />
+  </div>
+)}
               {/* ===== REACTIONS ===== */}
               <ReactionPanel day={day.date} />
 

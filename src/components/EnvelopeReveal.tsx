@@ -136,13 +136,13 @@ export default function EnvelopeReveal({ giftUrl = '#' }: Props) {
             style={{ color: 'rgba(233,213,255,0.85)', fontSize: '1.05rem', lineHeight: '1.9' }}
           >
             <p className="mb-4">
-              [Replace this with your final letter. This is the most important part of the website — the letter she'll read on May 25th.]
+              This is it. Your Birthday Gift❤️
             </p>
             <p className="mb-4">
-              [Tell her everything you've wanted to say. What this year meant. What she means to you. What you're building together. Make it real, raw, and unforgettable.]
+              This is everything we have worked for and dreamt of. I give you your future. 
             </p>
             <p>
-              [End with the gift reveal — a button that opens the second website you built together.]
+             I know this is not the kind of gift you were expecting, it is not material and all, but this is the future. Something that gives us a direction to move forward. I hope you like it. It has taken a lot of hardwork and countless nights.
             </p>
           </div>
 
@@ -159,10 +159,10 @@ export default function EnvelopeReveal({ giftUrl = '#' }: Props) {
               className="btn-gold inline-block"
               style={{ fontSize: '1rem', padding: '14px 36px' }}
             >
-              ✨ Open Your Birthday Gift ✨
+              ✨ Open Your Birthday Gift Babu✨
             </a>
             <p className="font-script text-sm mt-3" style={{ color: 'rgba(244,114,182,0.6)' }}>
-              [Replace with the URL of your second website]
+              I hope you like it.❤️
             </p>
           </div>
         </div>

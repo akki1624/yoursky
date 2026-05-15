@@ -63,7 +63,7 @@ function MemoriesPage() {
           {/* Header */}
           <div className="text-center mb-10">
             <p className="font-script text-base mb-2" style={{ color: '#f472b6' }}>
-              A scrapbook of us
+              A scrapbook of you, for you.
             </p>
             <h1
               className="font-serif font-bold mb-3"
@@ -75,10 +75,10 @@ function MemoriesPage() {
                 WebkitTextFillColor: 'transparent',
               }}
             >
-              Our Memories ♡
+              Important Memories ♡
             </h1>
             <p className="font-body max-w-lg mx-auto" style={{ color: 'rgba(196,181,253,0.6)' }}>
-              How we have been through everything smiling and loving each other.❤️
+              How you have been through everything. These are some of the core days of your life.❤️
             </p>
           </div>
 
@@ -150,7 +150,7 @@ function MemoriesPage() {
           {/* Bottom note */}
           <div className="text-center mt-8">
             <p className="font-script text-base" style={{ color: 'rgba(244,114,182,0.6)' }}>
-              15 memories and counting... ♡
+              These are some days and things that I want you to never forget... ♡
             </p>
             <p className="font-body text-sm mt-1" style={{ color: 'rgba(196,181,253,0.4)' }}>
               
