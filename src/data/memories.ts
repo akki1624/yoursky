@@ -22,9 +22,9 @@ const memories: Memory[] = [
   },
   {
     id: 2,
-    title: 'Our First Laugh Together',
-    date: 'Write the date here',
-    note: `[Replace with a memory about the first time you laughed together — what was the joke, the situation, or the silly moment that started it all? Laughter is the beginning of everything.]`,
+    title: 'My Favourite You',
+    date: 'Everyday in My Heart',
+    note: `This is the peak beauty. You cannot fathom, this... yes this... a simple elegant smile, that simplicity, that hairdo and that kurti look. A woman cannot get more beautiful than this picture portrays. I am grateful to have captured this picture. It will stay with me forever.❤️`,
     imagePlaceholder: '/memories/memory2.png',
     rotation: 2,
     color: '#ede9fe',

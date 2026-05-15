@@ -153,7 +153,7 @@ function MemoriesPage() {
               15 memories and counting... ♡
             </p>
             <p className="font-body text-sm mt-1" style={{ color: 'rgba(196,181,253,0.4)' }}>
-              Replace the placeholders with your real photos and stories
+              
             </p>
           </div>
         </div>

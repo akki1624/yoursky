@@ -131,7 +131,7 @@ function FeelingPage() {
               className="font-body max-w-md mx-auto"
               style={{ color: 'rgba(196,181,253,0.6)', lineHeight: '1.7' }}
             >
-              Tap how you're feeling. Get a message made just for that moment.
+              Choose whatever you are feeling. Even if I am not around(although I will try to be), always treat these words as your guiding light in life
             </p>
 
             <div className="flex justify-center items-center gap-2 mt-4">
@@ -188,7 +188,7 @@ function FeelingPage() {
           {/* Bottom note */}
           <div className="text-center mt-8">
             <p className="font-script text-base" style={{ color: 'rgba(244,114,182,0.5)' }}>
-              Each tap shuffles a new message, just for you ✨
+              Everytime you will get a different guiding light, as small as it may be, it will guide you out of the darkness. A new light for every little feeling you have ✨
             </p>
           </div>
         </div>
